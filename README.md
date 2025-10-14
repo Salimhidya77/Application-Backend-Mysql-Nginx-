@@ -20,3 +20,4 @@ A lightweight backend app with database support and web server.
 3. Run the backend
 
 **Ready to deploy!**
+![WhatsApp Image 2025-10-14 at 20 07 02_d507049b](https://github.com/user-attachments/assets/9af46e3e-d180-4f2a-abd0-def6c5496f2c)
